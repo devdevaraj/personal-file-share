@@ -1,0 +1,47 @@
+{
+  "name": "personal-file-share",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "nodemon --exec \"tsx server/index.ts\" --watch server",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "tsc && vite build",
+    "start": "tsx server/index.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/express-session": "^1.18.2",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.5.2",
+    "axios": "^1.12.2",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "multer": "^2.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.1.13",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
