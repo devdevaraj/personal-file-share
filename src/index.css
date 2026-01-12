@@ -1,3 +1,25 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
-html, body, #root { height: 100%; }
+:root {
+  /* Default to light, override in .dark */
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-indigo-500/30 text-indigo-900 dark:text-indigo-100;
+}
